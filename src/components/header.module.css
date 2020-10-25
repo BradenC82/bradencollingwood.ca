@@ -1,0 +1,4 @@
+li {
+  @apply cursor-pointer;
+  margin-bottom: 0;
+}

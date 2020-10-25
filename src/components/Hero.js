@@ -1,8 +1,4 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 import * as THREE from "three"
 import { Canvas } from "react-three-fiber"
@@ -76,19 +72,16 @@ function Lights() {
   )
 }
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
-
-    <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
-      <Lights />
-      <Content />
-    </Canvas>
-
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
+const Hero = () => (
+  <Canvas
+    shadowMap
+    camera={{ position: [0, 0, 160], fov: 100 }}
+    style={{ height: "70vh" }}
+    className="hidden md:block"
+  >
+    <Lights />
+    <Content />
+  </Canvas>
 )
 
-export default SecondPage
+export default Hero
