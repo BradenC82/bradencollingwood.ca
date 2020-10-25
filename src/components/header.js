@@ -9,7 +9,9 @@ const Header = ({ siteTitle }) => {
 
   // True for view ports <= 768px
   const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 1024px)").matches
+    typeof window !== "undefined"
+      ? window.matchMedia("(max-width: 1024px)").matches
+      : false
   )
 
   // Keeping the handler defined inside useEffect prevents the method being recreated on every render
@@ -18,7 +20,8 @@ const Header = ({ siteTitle }) => {
       const handler = event => {
         setMatches(event.matches)
       }
-      window.matchMedia("(max-width: 1024px)").addListener(handler)
+      typeof window !== "undefined" &&
+        window.matchMedia("(max-width: 1024px)").addListener(handler)
     },
     [] /* componentDidMount*/
   )
