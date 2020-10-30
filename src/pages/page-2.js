@@ -3,91 +3,84 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-import * as THREE from "three"
-import { Canvas } from "react-three-fiber"
-import { useSprings, a } from "react-spring/three"
-
-const number = 35
-const colors = [
-  "#A2CCB6",
-  "#FCEEB5",
-  "#EE786E",
-  "#e0feff",
-  "lightpink",
-  "lightblue",
-]
-const random = i => {
-  const r = Math.random()
-  return {
-    position: [100 - Math.random() * 200, 100 - Math.random() * 200, i * 1.5],
-    color: colors[Math.round(Math.random() * (colors.length - 1))],
-    scale: [1 + r * 14, 1 + r * 14, 1],
-    rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
-  }
-}
-
-const data = new Array(number).fill().map(() => {
-  return {
-    color: colors[Math.round(Math.random() * (colors.length - 1))],
-    args: [0.1 + Math.random() * 9, 0.1 + Math.random() * 9, 10],
-  }
-})
-
-function Content() {
-  const [springs, set] = useSprings(number, i => ({
-    from: random(i),
-    ...random(i),
-    config: { mass: 20, tension: 150, friction: 50 },
-  }))
-  useEffect(
-    () =>
-      void setInterval(() => set(i => ({ ...random(i), delay: i * 40 })), 3000),
-    []
-  )
-  return data.map((d, index) => (
-    <a.mesh key={index} {...springs[index]} castShadow receiveShadow>
-      <boxBufferGeometry attach="geometry" args={d.args} />
-      <a.meshStandardMaterial
-        attach="material"
-        color={springs[index].color}
-        roughness={0.75}
-        metalness={0.5}
-      />
-    </a.mesh>
-  ))
-}
-
-function Lights() {
-  return (
-    <group>
-      <pointLight intensity={0.3} />
-      <ambientLight intensity={2} />
-      <spotLight
-        castShadow
-        intensity={0.2}
-        angle={Math.PI / 7}
-        position={[150, 150, 250]}
-        penumbra={1}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-      />
-    </group>
-  )
-}
+import Profile from "../assets/profile.png"
 
 const SecondPage = () => (
   <Layout>
     <SEO title="Page two" />
-    <h1>Hi from the second page</h1>
-    <p>Welcome to page 2</p>
+    <div
+      style={{
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(19rem, 1fr))",
+      }}
+      className=""
+    >
+      <div className="mt-4 lg:mt-40 md:px-6">
+        <h1 className="text-5xl">The story so far ...</h1>
+        <p className="pt-4">
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+          voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt
+          aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex
+          dolorem veritatis."
+        </p>
 
-    <Canvas shadowMap camera={{ position: [0, 0, 100], fov: 100 }}>
-      <Lights />
-      <Content />
-    </Canvas>
+        <button className="flex items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
+          Resume
+          <svg
+            className="ml-2 w-4 h-4 fill-current"
+            height="1rem"
+            viewBox="0 0 512 512"
+            width="1rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Solid">
+              <path d="m239.029 384.97a24 24 0 0 0 33.942 0l90.509-90.509a24 24 0 0 0 0-33.941 24 24 0 0 0 -33.941 0l-49.539 49.539v-262.059a24 24 0 0 0 -48 0v262.059l-49.539-49.539a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941z" />
+              <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" />
+            </g>
+          </svg>
+        </button>
 
-    <Link to="/">Go back to the homepage</Link>
+        <h2 className="text-xl pt-4">Skills:</h2>
+
+        <div className="flex mt-2">
+          <div>
+            <b>Category</b>
+            <ul className="mr-6">
+              <li>React</li>
+              <li>Redux</li>
+              <li>Jest</li>
+              <li>JS ES6</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+
+          <div>
+            <b>Category</b>
+            <ul className="mr-6">
+              <li>React</li>
+              <li>Redux</li>
+              <li>Jest</li>
+              <li>JS ES6</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+
+          <div>
+            <b>Category</b>
+            <ul className="mr-6">
+              <li>React</li>
+              <li>Redux</li>
+              <li>Jest</li>
+              <li>JS ES6</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <img className="mt-8 md:mt-0" src={Profile}></img>
+    </div>
   </Layout>
 )
 

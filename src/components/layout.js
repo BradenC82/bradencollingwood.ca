@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "./footer"
+import Banner from "./Banner"
 import "../styles/global.css"
 
 const Layout = ({ children }) => {
@@ -27,9 +28,9 @@ const Layout = ({ children }) => {
   return (
     <div className="container mx-auto" style={{ background: "white" }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="p-6" style={{ minHeight: "1080px" }}>
-        {children}
-      </main>
+      <main className="p-8">{children}</main>
+
+      <Banner></Banner>
       <Footer></Footer>
     </div>
   )

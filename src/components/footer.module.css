@@ -1,0 +1,3 @@
+li:hover {
+  @apply text-gray-500;
+}

@@ -5,9 +5,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 
-import Image from "../assets/image.png";
+import Melophile from "../assets/melophile.png";
 import Kitchon from "../assets/kitchon.png";
-import Venice from "../assets/venice.png";
+import Venice from "../assets/venice.jpg";
+import Digital from "../assets/digital.png";
+
+import Card from "../components/Card";
+
+const bodyText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex dolorem veritatis."
 
 const IndexPage = () => (
   <Layout>
@@ -17,11 +22,10 @@ const IndexPage = () => (
         width: "100%",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(19rem, 1fr))",
-        cursor: "pointer",
       }}
       className=""
     >
-      <div className="my-10 md:px-8">
+      <div className="my-10 md:px-6">
         <div className="py-10 md:py-32">
           <h1 className="text-6xl">Hello, I'm Braden</h1>
           <p>
@@ -35,41 +39,23 @@ const IndexPage = () => (
       </div>
       <Hero></Hero>
     </div>
-    <h4 className="md:px-8 text-4xl">Here's a few of my projects</h4>
+    <div className="pb-8" id="myWork"></div>
+    <h4 className="md:px-6 text-4xl" >Here's a few of my projects</h4>
     <div
-    className="py-10 md:p-8"
+    className="py-10 md:p-6"
       style={{
         width: "100%",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(19rem, 1fr))",
         gridGap: "1.2rem",
-        cursor: "pointer",
       }}
     >
-      <div className="border rounded border-gray-400 p-8">
-        <img src={Image}></img>
-        <h2>Melophile</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex dolorem veritatis.</p>
-        <button className="border rounded border-black py-2 px-4 my-4">View the project</button>
-      </div>
-      <div className="border rounded border-gray-400 p-8">
-        <img src={Venice}></img>
-        <h2>Venezia</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex dolorem veritatis.</p>
-        <button className="border rounded border-black py-2 px-4 my-4">View the project</button>
-      </div>
-      <div className="border rounded border-gray-400 p-8">
-        <img src={Kitchon}></img>
-        <h2>Kitchon</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex dolorem veritatis.</p>
-        <button className="border rounded border-black py-2 px-4 my-4">View the project</button>
-      </div>
-      <div className="border rounded border-gray-400 p-8">
-        <img src={Image}></img>
-        <h2>Collingwood Digital</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex dolorem veritatis.</p>
-        <button className="border rounded border-black py-2 px-4 my-4">View the project</button>
-      </div>
+
+      <Card img={Melophile} title={'Melophile'} body={bodyText}></Card>
+      <Card img={Venice} title={'Venezia'} body={bodyText}></Card>
+      <Card img={Kitchon} title={'Kitchon'} body={bodyText}></Card>
+      <Card img={Digital} title={'Collingwood Digital'} body={bodyText}></Card>
+      
 
       
 
@@ -80,24 +66,8 @@ const IndexPage = () => (
       
     </div>
 
-    <div className=" my-10 md:mx-8 bg-teal-500">
-      <div className="p-8">
-      <p className="text-white" >I would love to work with you!</p>
-      <h3 className="my-4 text-4xl  text-white" style={{marginBottom:'0.5rem'}}>I am currently looking for a 4 month internship as a frontend developer from June to Decemeber</h3>
-      <div className="flex items-end justify-between">
-      <p className="text-white ">Please feel free to reach out, I would love to learn more about the roles and opportunities for students in your organization.</p>
-        <div className="flex">
-        <div className="w-8 h-8 mx-2 bg-teal-800"></div>
-        <div className="w-8 h-8 mx-2 bg-teal-800"></div>
-        <div className="w-8 h-8 mx-2 bg-teal-800"></div>
-        </div>
       
-      </div>
-      
-      
-      </div>
-      
-    </div>
+    
   </Layout>
 )
 

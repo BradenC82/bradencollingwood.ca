@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import React, { useState, useEffect } from "react"
 import "./header.module.css"
 import Dropdown from "./dropdown"
+import Drawer from "./Drawer"
 
 const Header = ({ siteTitle }) => {
   const [open, setOpen] = useState(false)
@@ -30,20 +31,24 @@ const Header = ({ siteTitle }) => {
     <nav class="flex items-center justify-between flex-wrap ">
       <div
         style={{ height: "5rem", width: "5rem" }}
-        class="bg-teal-500 p-6 flex items-center justify-center flex-shrink-0 text-white mr-6"
+        class="bg-teal-500  p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer"
       >
         <h1 class="text-white text-xl tracking-tight">BC</h1>
       </div>
 
       <div class="block lg:hidden mr-8" onClick={() => setOpen(prev => !prev)}>
-        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-teal-500 hover:border-white">
+        <button class="flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-500 hover:border-teal-500">
           <svg
             class="fill-current h-3 w-3"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
             <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            {open ? (
+              <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"></path>
+            ) : (
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            )}
           </svg>
         </button>
       </div>
@@ -64,17 +69,26 @@ const Header = ({ siteTitle }) => {
                 style={{ fontSize: "1rem" }}
               >
                 <li>
-                  <Link className="inline-block mt-0 text-black hover:text-teal-500 mr-8">
+                  <Link
+                    href="/"
+                    className="inline-block mt-0 text-black hover:text-teal-500 mr-8"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link className=" lg:inline-block mt-0 text-black hover:text-teal-500 mr-8">
+                  <Link
+                    href="/page-2"
+                    className=" lg:inline-block mt-0 text-black hover:text-teal-500 mr-8"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link className=" inline-block mt-0 text-black hover:text-teal-500">
+                  <Link
+                    href="/#myWork"
+                    className=" inline-block mt-0 text-black hover:text-teal-500"
+                  >
                     My Work
                   </Link>
                 </li>
