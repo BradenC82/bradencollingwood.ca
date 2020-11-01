@@ -5,21 +5,14 @@ import { Canvas } from "react-three-fiber"
 import { useSprings, a } from "react-spring/three"
 
 const number = 35
-const colors = [
-  "#A2CCB6",
-  "#FCEEB5",
-  "#EE786E",
-  "#e0feff",
-  "lightpink",
-  "lightblue",
-]
+const colors = ["pink", "#fff", "#38b2ac", "#59aab1"]
 const random = i => {
   const r = Math.random()
   return {
-    position: [100 - Math.random() * 200, 100 - Math.random() * 200, i * 1.5],
+    position: [100 - Math.random() * 200, 100 - Math.random() * 200, i * 1.25],
     color: colors[Math.round(Math.random() * (colors.length - 1))],
     scale: [1 + r * 14, 1 + r * 14, 1],
-    rotation: [0, 0, THREE.Math.degToRad(Math.round(Math.random()) * 45)],
+    rotation: [0, 0, 0],
   }
 }
 
@@ -34,7 +27,7 @@ function Content() {
   const [springs, set] = useSprings(number, i => ({
     from: random(i),
     ...random(i),
-    config: { mass: 20, tension: 150, friction: 50 },
+    config: { mass: 10, tension: 100, friction: 50 },
   }))
   useEffect(
     () =>
@@ -75,7 +68,7 @@ function Lights() {
 const Hero = () => (
   <Canvas
     shadowMap
-    camera={{ position: [0, 0, 160], fov: 100 }}
+    camera={{ position: [0, 0, 130], fov: 120 }}
     style={{ height: "70vh" }}
     className="hidden md:block"
   >

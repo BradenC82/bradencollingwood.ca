@@ -7,7 +7,7 @@ import Profile from "../assets/profile.png"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="About Me" />
     <div
       style={{
         width: "100%",
@@ -16,16 +16,21 @@ const SecondPage = () => (
       }}
       className=""
     >
-      <div className="mt-4 lg:mt-40 md:px-6">
-        <h1 className="text-5xl">The story so far ...</h1>
+      <div className="mt-4 lg:mt-40 md:pl-6 md:mr-12">
+        <h1 className="text-5xl">A little about me ...</h1>
         <p className="pt-4">
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          voluptatem quo at quasi dolore. Culpa necessitatibus placeat incidunt
-          aliquid, ratione voluptates rerum fugit nobis vero fuga dolores ex
-          dolorem veritatis."
+          I'm currently a 3rd year Software Engineering Student studying at the
+          University of Ottawa. My favourite feeling in the world is seeing the
+          projects and software I work on solve problems and bring real value to
+          the people that use them. In my free time I love jumping into new
+          technologies, playing music, and making cool stuff on the web!
         </p>
 
-        <button className="flex items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
+        <a
+          href="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
+          target="_blank"
+          className="flex max-w-content items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
+        >
           Resume
           <svg
             className="ml-2 w-4 h-4 fill-current"
@@ -39,16 +44,16 @@ const SecondPage = () => (
               <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" />
             </g>
           </svg>
-        </button>
+        </a>
 
-        <h2 className="text-xl pt-4">Skills:</h2>
+        <h2 className="text-xl pt-4">Technologies I love to use:</h2>
 
         <div className="flex mt-2">
           <div>
-            <b>Category</b>
+            <b>Front End</b>
             <ul className="mr-6">
               <li>React</li>
-              <li>Redux</li>
+              <li>Redux/MobX</li>
               <li>Jest</li>
               <li>JS ES6</li>
               <li>Typescript</li>
@@ -56,24 +61,21 @@ const SecondPage = () => (
           </div>
 
           <div>
-            <b>Category</b>
-            <ul className="mr-6">
-              <li>React</li>
-              <li>Redux</li>
-              <li>Jest</li>
-              <li>JS ES6</li>
-              <li>Typescript</li>
+            <b>Back End</b>
+            <ul className="mr-10">
+              <li>Node</li>
+              <li>Express</li>
+              <li>AWS</li>
+              <li>Docker</li>
             </ul>
           </div>
 
           <div>
-            <b>Category</b>
+            <b>Databases</b>
             <ul className="mr-6">
-              <li>React</li>
-              <li>Redux</li>
-              <li>Jest</li>
-              <li>JS ES6</li>
-              <li>Typescript</li>
+              <li>MongoDB</li>
+              <li>SQl Server</li>
+              <li>Firebase</li>
             </ul>
           </div>
         </div>

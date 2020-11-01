@@ -1,27 +1,51 @@
-import React from "react"
+import React, { useEffect } from "react"
 
-export default function Banner() {
-  return (
-    <div className=" my-10 md:mx-8 bg-teal-500">
-      <div className="p-8">
-        <p className="text-white">I would love to work with you!</p>
-        <h3
-          className="my-4 text-4xl  text-white"
-          style={{ marginBottom: "0.5rem" }}
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+const Contact = () => (
+  <Layout>
+    <SEO title="Contact" />
+    <div className="flex flex-wrap pt-12 pb-12 lg:pt-40 lg:pb-24">
+      <div className="md:pl-6 mr-16" style={{ maxWidth: "36rem" }}>
+        <h1 className="text-5xl">Let's connect!</h1>
+        <p className="pt-4">
+          Send me a message or connect on social media. I'll be sure to get back
+          to you as soon as I can.
+        </p>
+
+        <a
+          href="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
+          target="_blank"
+          className="max-w-content flex items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
         >
-          I am currently looking for a 4 month internship as a Full Stack or
-          Front-End developer from June to Decemeber
-        </h3>
-        <div className="flex items-end justify-between">
-          <p className="text-white ">
-            Please feel free to reach out, I would love to learn more about the
-            roles and opportunities for students in your organization.
-          </p>
+          Resume
+          <svg
+            className="ml-2 w-4 h-4 fill-current"
+            height="1rem"
+            viewBox="0 0 512 512"
+            width="1rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Solid">
+              <path d="m239.029 384.97a24 24 0 0 0 33.942 0l90.509-90.509a24 24 0 0 0 0-33.941 24 24 0 0 0 -33.941 0l-49.539 49.539v-262.059a24 24 0 0 0 -48 0v262.059l-49.539-49.539a24 24 0 0 0 -33.941 0 24 24 0 0 0 0 33.941z" />
+              <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" />
+            </g>
+          </svg>
+        </a>
+      </div>
+
+      <div className="md:pl-6 mt-8">
+        <div>
+          <b>General Inquries</b>
+          <h1 className="text-3xl  text-gray-700">
+            bradencollingwood82<span className="inline-block">@gmail.com</span>
+          </h1>
           <div className="flex">
             <a
               href="https://github.com/BradenC82"
               target="_blank"
-              className="w-8 h-8 mx-2 text-white"
+              className="w-8 h-8 mr-2 text-gray-700"
             >
               <svg
                 aria-hidden="true"
@@ -43,7 +67,7 @@ export default function Banner() {
             <a
               href="https://www.linkedin.com/in/braden-collingwood/"
               target="_blank"
-              className="w-8 h-8 mx-2  text-white"
+              className="w-8 h-8 mx-2 text-gray-700"
             >
               <svg
                 aria-hidden="true"
@@ -66,5 +90,7 @@ export default function Banner() {
         </div>
       </div>
     </div>
-  )
-}
+  </Layout>
+)
+
+export default Contact

@@ -29,12 +29,13 @@ const Header = ({ siteTitle }) => {
 
   return (
     <nav class="flex items-center justify-between flex-wrap ">
-      <div
+      <a
+        href="/"
         style={{ height: "5rem", width: "5rem" }}
         class="bg-teal-500  p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer"
       >
         <h1 class="text-white text-xl tracking-tight">BC</h1>
-      </div>
+      </a>
 
       <div class="block lg:hidden mr-8" onClick={() => setOpen(prev => !prev)}>
         <button class="flex items-center px-3 py-2 border rounded text-teal-500 border-teal-500 hover:text-teal-500 hover:border-teal-500">
@@ -78,7 +79,7 @@ const Header = ({ siteTitle }) => {
                 </li>
                 <li>
                   <Link
-                    href="/page-2"
+                    href="/aboutMe"
                     className=" lg:inline-block mt-0 text-black hover:text-teal-500 mr-8"
                   >
                     About
@@ -96,7 +97,7 @@ const Header = ({ siteTitle }) => {
             </div>
             <div>
               <a
-                href="#"
+                href="/contact"
                 class=" mr-8 inline-block  px-5 py-3 leading-none border rounded text-black border-black hover:border-teal-500 hover:text-teal-500  mt-4 lg:mt-0"
                 style={{ fontSize: "1rem" }}
               >

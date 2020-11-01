@@ -10,7 +10,7 @@
   position: absolute;
   right: 0;
   bottom: -5px;
-  transition: width 0.3s ease 0s, right 0.3s ease 0s;
+  transition: width 0.3s ease 0s right 0.3s ease 0s;
   width: 0%;
 }
 
