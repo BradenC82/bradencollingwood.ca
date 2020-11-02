@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default function Banner() {
   return (
@@ -18,8 +19,8 @@ export default function Banner() {
             roles and opportunities for students in your organization.
           </p>
           <div className="flex">
-            <a
-              href="https://github.com/BradenC82"
+            <Link
+              to="https://github.com/BradenC82"
               target="_blank"
               className="w-8 h-8 mx-2 text-white"
             >
@@ -39,9 +40,9 @@ export default function Banner() {
                   class=""
                 ></path>
               </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/braden-collingwood/"
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/braden-collingwood/"
               target="_blank"
               className="w-8 h-8 mx-2  text-white"
             >
@@ -61,7 +62,7 @@ export default function Banner() {
                   class=""
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

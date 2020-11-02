@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+
+import React from "react"
 
 const Dropdown = ({ siteTitle, open }) => {
   return (
@@ -14,17 +14,14 @@ const Dropdown = ({ siteTitle, open }) => {
       <div class=" shadow text-sm ml-auto flex flex-col  px-6 ">
         <ul class="pb-6 pt-6 border-b">
           <li>
-            <Link
-              to="/"
-              className="block     text-gray-800 hover:text-teal-500 "
-            >
+            <Link to="/" className="block text-gray-800 hover:text-teal-500 ">
               Home
             </Link>
           </li>
           <li>
             <Link
               to="/about"
-              className="block mt-4     text-gray-800 hover:text-teal-500 "
+              className="block mt-4 text-gray-800 hover:text-teal-500 "
             >
               About
             </Link>
@@ -32,17 +29,18 @@ const Dropdown = ({ siteTitle, open }) => {
           <li>
             <Link
               to="/#myWork"
-              className="block mt-4     text-gray-800 hover:text-teal-500"
+              className="block mt-4 text-gray-800 hover:text-teal-500"
             >
               My Work
             </Link>
           </li>
           <div>
-            <Link
-              href="/contact"
-              class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-800 border-gray-800 hover:border-teal-500 hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-            >
-              Contact
+            <Link to="/contact" >
+              <a
+                class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-800 border-gray-800 hover:border-teal-500 hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+              >
+                Contact
+              </a>
             </Link>
           </div>
         </ul>

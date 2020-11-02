@@ -1,6 +1,5 @@
 import React, { useEffect } from "react"
 
-import * as THREE from "three"
 import { Canvas } from "react-three-fiber"
 import { useSprings, a } from "react-spring/three"
 
@@ -29,9 +28,11 @@ function Content() {
     ...random(i),
     config: { mass: 10, tension: 100, friction: 50 },
   }))
+
   useEffect(
     () =>
       void setInterval(() => set(i => ({ ...random(i), delay: i * 40 })), 3000),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   )
   return data.map((d, index) => (

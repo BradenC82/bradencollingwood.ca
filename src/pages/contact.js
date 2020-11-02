@@ -1,4 +1,5 @@
-import React, { useEffect } from "react"
+import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,8 +15,8 @@ const Contact = () => (
           get back to you as soon as I can.
         </p>
 
-        <a
-          href="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
+        <Link
+          to="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
           target="_blank"
           className="max-w-content flex items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
         >
@@ -32,7 +33,7 @@ const Contact = () => (
               <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" />
             </g>
           </svg>
-        </a>
+        </Link>
       </div>
 
       <div className="md:pl-6 mt-8">
@@ -42,8 +43,8 @@ const Contact = () => (
             bradencollingwood82<span className="inline-block">@gmail.com</span>
           </h1>
           <div className="flex">
-            <a
-              href="https://github.com/BradenC82"
+            <Link
+              to="https://github.com/BradenC82"
               target="_blank"
               className="w-8 h-8 mr-2 text-gray-700"
             >
@@ -63,9 +64,9 @@ const Contact = () => (
                   class=""
                 ></path>
               </svg>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/braden-collingwood/"
+            </Link>
+            <Link
+              to="https://www.linkedin.com/in/braden-collingwood/"
               target="_blank"
               className="w-8 h-8 mx-2 text-gray-700"
             >
@@ -85,7 +86,7 @@ const Contact = () => (
                   class=""
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

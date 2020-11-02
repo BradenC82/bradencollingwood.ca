@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -26,8 +26,8 @@ const about = () => (
           technologies, playing music, and making cool stuff on the web!
         </p>
 
-        <a
-          href="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
+        <Link
+          to="https://drive.google.com/file/d/1NnX6FWLHvvDECIDlm_eLLqn5VSAmHSSC/view"
           target="_blank"
           className="flex max-w-content items-center my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded"
         >
@@ -44,7 +44,7 @@ const about = () => (
               <path d="m464 232a24 24 0 0 0 -24 24v184h-368v-184a24 24 0 0 0 -48 0v192a40 40 0 0 0 40 40h384a40 40 0 0 0 40-40v-192a24 24 0 0 0 -24-24z" />
             </g>
           </svg>
-        </a>
+        </Link>
 
         <h2 className="text-xl pt-4">Technologies I love to use:</h2>
 
@@ -81,7 +81,7 @@ const about = () => (
         </div>
       </div>
 
-      <img className="mt-0 md:mt-8 " src={Profile}></img>
+      <img className="mt-0 md:mt-8" alt="Profile" src={Profile}></img>
     </div>
   </Layout>
 )
