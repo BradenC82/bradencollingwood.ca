@@ -2,11 +2,11 @@ import React from "react"
 
 export default function Banner() {
   return (
-    <div className=" my-10 md:mx-8 bg-teal-500">
+    <div className=" md:my-10 md:mx-8 bg-teal-500">
       <div className="p-8">
         <p className="text-white">I would love to work with you!</p>
         <h3
-          className="my-4 text-4xl  text-white"
+          className="my-4 text-2xl md:text-4xl  text-white"
           style={{ marginBottom: "0.5rem" }}
         >
           I am currently looking for a 4 month internship as a Full Stack or

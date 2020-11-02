@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
   return (
     <div className="container mx-auto" style={{ background: "white" }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="p-8">{children}</main>
+      <main className="px-8">{children}</main>
 
       <Banner></Banner>
       <Footer></Footer>

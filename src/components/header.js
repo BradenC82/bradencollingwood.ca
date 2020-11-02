@@ -79,7 +79,7 @@ const Header = ({ siteTitle }) => {
                 </li>
                 <li>
                   <Link
-                    href="/aboutMe"
+                    href="/about"
                     className=" lg:inline-block mt-0 text-black hover:text-teal-500 mr-8"
                   >
                     About

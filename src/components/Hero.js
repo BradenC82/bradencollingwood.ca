@@ -5,7 +5,7 @@ import { Canvas } from "react-three-fiber"
 import { useSprings, a } from "react-spring/three"
 
 const number = 35
-const colors = ["pink", "#fff", "#38b2ac", "#59aab1"]
+const colors = ["pink", "#fff", "#38b2ac", "#59aab1", "#81e6d9"]
 const random = i => {
   const r = Math.random()
   return {

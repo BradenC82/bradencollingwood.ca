@@ -10,8 +10,8 @@ const Contact = () => (
       <div className="md:pl-6 mr-16" style={{ maxWidth: "36rem" }}>
         <h1 className="text-5xl">Let's connect!</h1>
         <p className="pt-4">
-          Send me a message or connect on social media. I'll be sure to get back
-          to you as soon as I can.
+          Send me a message or connect with me on social media. I'll be sure to
+          get back to you as soon as I can.
         </p>
 
         <a

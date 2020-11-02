@@ -5,18 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Profile from "../assets/profile.png"
 
-const SecondPage = () => (
+const about = () => (
   <Layout>
     <SEO title="About Me" />
     <div
       style={{
         width: "100%",
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(19rem, 1fr))",
+        gridTemplateColumns: "repeat(auto-fit, minmax(20rem, 1fr))",
       }}
       className=""
     >
-      <div className="mt-4 lg:mt-40 md:pl-6 md:mr-12">
+      <div className="my-20 md:my-32 lg:my-40 md:pl-6 md:mr-12">
         <h1 className="text-5xl">A little about me ...</h1>
         <p className="pt-4">
           I'm currently a 3rd year Software Engineering Student studying at the
@@ -81,9 +81,9 @@ const SecondPage = () => (
         </div>
       </div>
 
-      <img className="mt-8 md:mt-0" src={Profile}></img>
+      <img className="mt-0 md:mt-8 " src={Profile}></img>
     </div>
   </Layout>
 )
 
-export default SecondPage
+export default about

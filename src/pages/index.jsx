@@ -23,16 +23,16 @@ const IndexPage = () => (
       }}
       className=""
     >
-      <div className="my-10 md:pl-6">
-        <div className="py-10 md:py-32">
+      <div className="md:my-8 md:pl-6">
+        <div className="pt-20 pb-16 md:py-40">
           <h1 className="text-6xl">Hello, I'm Braden</h1>
           <p>
             I'm a third year Software Engineering Student <br />
             learning cool things at uOttawa.
           </p>
-          <a href="/aboutMe" className="inline-block my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
+          <Link href="/about" className="inline-block my-4 bg-transparent hover:bg-teal-500 text-teal-600 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
             A little more about me
-          </a>
+          </Link>
         </div>
       </div>
       <Hero></Hero>
@@ -40,7 +40,7 @@ const IndexPage = () => (
     <div className="pb-8" id="myWork"></div>
     <h4 className="md:px-6 text-4xl" >Here's a few of my projects</h4>
     <div
-    className="py-10 md:p-6"
+    className="py-8 md:px-6"
       style={{
         width: "100%",
         display: "grid",
@@ -58,7 +58,7 @@ const IndexPage = () => (
       
 
       <div className="rounded p-8 flex items-center border border-gray-400">
-        <h1 className="text-4xl text-center text-gray-400">Coming Soon ...</h1>
+        <h1 className="text-4xl text-center text-gray-400">Coming Soon<span style={{display:'inline-block'}}>...</span></h1>
       </div>
 
       
