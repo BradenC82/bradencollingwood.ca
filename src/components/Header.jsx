@@ -1,41 +1,19 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import "./header.module.css"
 import Dropdown from "./Dropdown"
+import Navigation from "./Navigation"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   const [open, setOpen] = useState(false)
-
-  // True for view ports <= 768px
-  const [matches, setMatches] = useState(
-    typeof window !== "undefined"
-      ? window.matchMedia("(max-width: 1024px)").matches
-      : false
-  )
-
-  // Keeping the handler defined inside useEffect prevents the method being recreated on every render
-  useEffect(
-    () => {
-      const handler = event => {
-        setMatches(event.matches)
-      }
-      typeof window !== "undefined" &&
-        window.matchMedia("(max-width: 1024px)").addListener(handler)
-    },
-    [] /* componentDidMount*/
-  )
 
   const handleClickHamburger = () => setOpen(prev => !prev)
 
   return (
     <nav class="flex items-center justify-between flex-wrap ">
-      <Link
-        to="/"
-      >
-        <a
-        style={{ height: "5rem", width: "5rem" }}
-        class="bg-teal-500  p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer">
+      <Link to="/">
+        <a className="w-20 h-20 bg-teal-500  p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer">
           <h1 class="text-white text-xl tracking-tight">BC</h1>
         </a>
       </Link>
@@ -59,60 +37,18 @@ const Header = ({ siteTitle }) => {
           </svg>
         </button>
       </div>
+
       <div
-        class={` transition-all duration-300 ease-linear w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
+        className="block lg:hidden transition-all duration-300 ease-linear w-full overflow-hidden"
         style={{
-          maxHeight: open || !matches ? "300px" : "0px",
-          overflow: "hidden",
+          maxHeight: open ? "300px" : "0px",
         }}
       >
-        {matches ? (
-          <Dropdown open={open}></Dropdown>
-        ) : (
-          <>
-            <div class="text-sm flex-grow">
-              <ul
-                class="flex justify-end mr-8 flex-grow "
-                style={{ fontSize: "1rem" }}
-              >
-                <li>
-                  <Link
-                    to="/"
-                    className="inline-block mt-0 text-black hover:text-teal-500 mr-8"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about"
-                    className=" lg:inline-block mt-0 text-black hover:text-teal-500 mr-8"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#myWork"
-                    className=" inline-block mt-0 text-black hover:text-teal-500"
-                  >
-                    My Work
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <Link to="/contact">
-                <a
-                  class=" mr-8 inline-block  px-5 py-3 leading-none border rounded text-black border-black hover:border-teal-500 hover:text-teal-500  mt-4 lg:mt-0"
-                  style={{ fontSize: "1rem" }}
-                >
-                  Contact
-                </a>
-              </Link>
-            </div>
-          </>
-        )}
+        <Dropdown open={open}></Dropdown>
+      </div>
+
+      <div className="hidden lg:block ">
+        <Navigation></Navigation>
       </div>
     </nav>
   )

@@ -1,5 +1,6 @@
 import React from "react"
 import "./footer.module.css"
+import { Link } from "gatsby"
 
 export default function footer() {
   return (
@@ -9,26 +10,26 @@ export default function footer() {
           <div className="mt-4 mr-12">
             <b>Directory</b>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Projects</li>
-              <li>Contact</li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/#myWork">My Work</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           <div className="mt-4 mr-12">
             <b>Development</b>
             <ul>
-              <li>Github</li>
-              <li>Leetcode</li>
-              <li>Hackerank</li>
+              <li><Link to="https://github.com/BradenC82">Github</Link></li>
+              <li><Link to="https://leetcode.com/BradenCollingwood/">Leetcode</Link></li>
+              <li><Link to="https://www.hackerrank.com/bradencollingwo1">Hackerank</Link></li>
             </ul>
           </div>
           <div className="mt-4 mr-12">
             <b>Social</b>
             <ul>
-              <li>Linkedin</li>
-              <li>Facebook</li>
-              <li>Instagram</li>
+              <li><Link to="https://www.linkedin.com/in/braden-collingwood/">Linkedin</Link></li>
+              <li><Link to="https://www.facebook.com/braden.collingwood.1/">Facebook</Link></li>
+              <li><Link to="https://www.instagram.com/bradencollingwood/">Instagram</Link></li>
             </ul>
           </div>
         </div>

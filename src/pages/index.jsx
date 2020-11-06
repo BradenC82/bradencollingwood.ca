@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/Hero"
 
-import Melophile from "../assets/melophile.png"
-import Kitchon from "../assets/kitchon.png"
-import Venice from "../assets/venice.jpg"
-import Digital from "../assets/digital.png"
+import Melophile from "../assets/images/melophile.png"
+import Kitchon from "../assets/images/kitchon.png"
+import Venice from "../assets/images/venice.jpg"
+import Digital from "../assets/images/digital.png"
 
 import Card from "../components/Card"
 
@@ -21,10 +21,9 @@ const IndexPage = () => (
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(19rem, 1fr))",
       }}
-      className=""
     >
-      <div className="md:my-8 md:pl-6">
-        <div className="pt-20 pb-16 md:py-40">
+      <div className="md:my-10 md:pl-6">
+        <div className="pt-24 pb-16 md:py-40">
           <h1 className="text-6xl">Hello, I'm Braden</h1>
           <p>
             I'm a third year Software Engineering Student <br />

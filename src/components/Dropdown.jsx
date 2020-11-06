@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 
 import React from "react"
 
-const Dropdown = ({ siteTitle, open }) => {
+const Dropdown = ({ open }) => {
   return (
     <div
       class={`transition-all  duration-300 ease-linear  w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
@@ -35,10 +35,8 @@ const Dropdown = ({ siteTitle, open }) => {
             </Link>
           </li>
           <div>
-            <Link to="/contact" >
-              <a
-                class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-800 border-gray-800 hover:border-teal-500 hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
-              >
+            <Link to="/contact">
+              <a class="inline-block text-sm px-4 py-2 leading-none border rounded text-gray-800 border-gray-800 hover:border-teal-500 hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">
                 Contact
               </a>
             </Link>
