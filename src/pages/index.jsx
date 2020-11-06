@@ -56,7 +56,7 @@ const IndexPage = () => (
         tech={"React, Express, Firebase Cloud Functions"}
         title={"Melophile"}
         body={
-          "Melophile sorts, filters, and visualizes the qualities of your favorite songs using data from the Spotify API audio analysis end point. It features firebase cloud functions to complete a JSON webtoken auth flow with the Spotify API"
+          "Melophile sorts, filters, and visualizes the qualities of your favorite songs using data from the Spotify API audio analysis end point. It features firebase cloud functions to complete a JSON webtoken auth flow with the Spotify API."
         }
       ></Card>
       <Card
