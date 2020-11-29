@@ -13,10 +13,11 @@ const Header = () => {
   return (
     <>
       <nav class="flex items-center justify-between flex-wrap ">
-        <Link to="/">
-          <a className="w-20 h-20 bg-teal-500  p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer">
-            <h1 class="text-white text-xl tracking-tight">BC</h1>
-          </a>
+        <Link
+          to="/"
+          className="w-20 h-20 bg-teal-500 p-6 flex items-center justify-center flex-shrink-0 text-white mr-6 cursor-pointer"
+        >
+          <h1 class="text-white text-xl tracking-tight">BC</h1>
         </Link>
 
         <div class="block lg:hidden mr-8">
