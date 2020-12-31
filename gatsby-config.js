@@ -3,7 +3,7 @@ module.exports = {
     title: `Braden Collingwood`,
     description: `Braden Collingwood Developer Portfolio`,
     author: `Braden Collingwood`,
-    url: `https://www.bradencollingwood.ca`,
+    url: `https://www.bradencollingwood.ca/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
