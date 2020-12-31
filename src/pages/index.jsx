@@ -14,7 +14,7 @@ import Card from "../components/Card"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <div
       style={{
         width: "100%",
