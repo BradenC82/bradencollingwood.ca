@@ -13,7 +13,7 @@ export default function Banner() {
           style={{ marginBottom: "0.5rem" }}
         >
           I am currently looking for a 4 month internship as a Full Stack or
-          Front-End developer for Summer 2021
+          Front-End developer for Summer 2022
         </h3>
         <div className="flex items-end justify-between">
           <p className="text-white">
